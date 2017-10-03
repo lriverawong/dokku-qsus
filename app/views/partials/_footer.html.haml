@@ -1,0 +1,19 @@
+%footer.footer
+  .container
+    .footer-top
+      %ul.links
+        %li
+          = link_to "About Us", "#{root_path}#about-us"
+        %li
+          = link_to "Our Partners", "#{root_path}#our-partners"
+
+      .social_media
+        %span
+          = link_to image_tag("facebook.png", alt: "Facebook Icon", class: 'icons'), "https://www.facebook.com/Queens-Sustainability-Conference-518355824970271/"
+    %br
+    .footer-bottom
+      .copyright
+        %span
+          Copyright
+          %span.glyphicon.glyphicon-copyright-mark
+            QSUS

@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title QSUS
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    -#= favicon_link_tag asset_path('qsus-tab-icon.ico'), :rel => 'icon', :type => "image/x-icon"
+    = favicon_link_tag asset_path('qsus-logo-transparent.png'), :rel => 'icon', :type =>  'image/png'
+
+  %body
+    = render 'partials/menu'
+    = yield
+    = render 'partials/footer'
