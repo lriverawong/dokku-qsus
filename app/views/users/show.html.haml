@@ -1,0 +1,11 @@
+%h1{:align => "center"}
+  Welcome to #{@user.username}'s page
+.row
+%h4{:align => "center"}
+  = @user.username
+  's articles
+.center
+  = will_paginate @user_articles
+= render 'articles/article', obj: @user_articles
+.center
+  = will_paginate @user_articles

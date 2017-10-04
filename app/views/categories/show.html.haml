@@ -1,0 +1,9 @@
+%h1{:align => "center"}= "Category: " + @category.name
+%div{:align => "center"}
+  - if logged_in? and current_user.admin?
+    .row
+      %span.badge= link_to "Edit Category Name", edit_category_path(@category)
+  = will_paginate @category_articles
+= render 'articles/article', obj: @category_articles
+%div{:align => "center"}
+  = will_paginate @category_articles
