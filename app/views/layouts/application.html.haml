@@ -1,4 +1,4 @@
-!!! 5
+!!!
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -10,8 +10,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     -#= favicon_link_tag asset_path('qsus-tab-icon.ico'), :rel => 'icon', :type => "image/x-icon"
     = favicon_link_tag asset_path('qsus-logo-transparent.png'), :rel => 'icon', :type =>  'image/png'
+    %noscript
+      = stylesheet_link_tag    'noscript', media: 'all', 'data-turbolinks-track' => true
 
   %body
-    = render 'partials/menu'
+    -#= render 'partials/menu'
     = yield
-    = render 'partials/footer'
+    -#= render 'partials/footer'

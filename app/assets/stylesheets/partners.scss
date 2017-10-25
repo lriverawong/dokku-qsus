@@ -1,5 +1,9 @@
 // styling for partners pop-up
 #partners {
+  background-color: white !important;
+  #Interested {
+    color: black;
+  }
   > h2 {
     color: #000000;
     border-bottom-color: #000000;
@@ -8,5 +12,75 @@
     display: block;
     max-width: 100%;
     margin: 0 auto;
+  }
+  .partner-flex-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .partner-flex-grid {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .tier1, .tier2, .tier3, .tier4, .tier5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .tier3, .tier4, .tier5 {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .partner-t1, .partner-t2, .partner-t3, .partner-t4, .partner-t5 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    .img {
+      margin: 5px;
+    }
+  }
+  .partner-t3, .partner-t4, .partner-t5 {
+    flex-direction: row;
+  }
+  // tier 1 partner
+  .partner-t1 {
+    .img {
+      width: 90%;
+    }
+  }
+  // tier 2 partner
+  .partner-t2 {
+    .img {
+      width: 70%;
+    }
+  }
+  // tier 3 partner
+  .partner-t3 {
+    width: 30%;
+    .img {
+    }
+  }
+  // tier 4 partner
+  .partner-t4 {
+    width: 20%;
+    .img {
+    }
+  }
+  // tier 5 partner
+  .partner-t5 {
+    width: 15%;
+    .img {
+      //width: 10%;
+    }
   }
 }

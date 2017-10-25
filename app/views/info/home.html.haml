@@ -1,58 +1,157 @@
-.landing-image
-  %p
-    = "QSUS 2018"
-  %p
-    = "Forging solidarity"
-
-.container
-  #about-us
-    -# = fa_icon "camera-retro", text: "Take a photo"
-    %h1
-      Queen's Sustainability Conference
-    .blurb
+#wrapper
+  / Header
+  %header#header
+    .logo
+      %span.logo
+        =image_tag("qsus_white_small.png")
+    .content
+      .inner
+        %h1 QUEEN'S SUSTAINABILITY CONFERENCE 2018
+        %p "forging solidarity"
+    %nav
+      %ul
+        %li
+          %a{:href => "#about_us"} ABOUT US
+        %li
+          %a{:href => "#partners"} PARTNERS
+        %li
+          %a{:href => "#contact"} CONTACT US
+        / <li><a href="#elements">Elements</a></li>
+  #main
+    / About
+    %article#about_us
+      %h2.major ABOUT US
+      %span.image.main
+        = image_tag("qsus_cover.png")
       %p
-        Our goal at QSUS will always be the same: to inspire innovation and collaboration amongst some of our generation’s
-        brightest minds. In doing so, we explore new and exciting ways of striving towards sustainability, and use this
-        practice to enact real, positive change in the Kingston community.
+        Our goal at QSUS will always be the same: to inspire innovation and collaboration amongst some of our
+        generation’s brightest minds. In doing so, we explore new and exciting ways of striving towards sustainability,
+        and use this practice to enact real, positive change in the Kingston community.
       %p
         Our methodology, however, is always changing – right alongside society’s most recent political, economic and
         technological trends. QSUS recognizes the rapidly changing nature of the modern world and uses this to our
         advantage. Not only do we believe in wearing many hats – we thrive in it; and we enjoy creating an environment
         that welcomes open mindedness and versatility. Whether it be in entrepreneurship, conservation, activism,
         technological innovation, or any number of areas – we are always up for a challenge, and we hope you are too.
-      %p
-        Welcome to QSUS 2018.
-    %p.quote
-      “I firmly believe in the idea that if you aren’t trying to change the world, then you just aren’t thinking big
-      enough. QSUS is the perfect platform for that – for students who really want to get their feet wet and make a
-      difference.”
-    %p.delegate
-      \- QSUS 2017 Delegate
-.page-divider
-.container
-  #our-partners
-    %h1
-      Our Partners
-    .photo-grid-container
-      .photo-grid
-        .photo-grid-item.first-item
-          .img
-            = image_tag "company-logos/sustainable-kingston.png"
-        .photo-grid-item
-          .img
-            = image_tag "company-logos/golder-associates-logo.svg.png"
-        .photo-grid-item
-          .img
-            = image_tag "company-logos/DDQIC.jpg"
-        .photo-grid-item
-          .img
-            = image_tag "company-logos/grizzly-grill-logo.png"
-        .photo-grid-item
-          .img
-            = image_tag "company-logos/queens-hospitality-logo.jpg"
-        .photo-grid-item
-          .img
-            = image_tag "company-logos/mackinnon_logo.jpg"
-.container
-  .contact_link
-    = link_to "Contact Us!", contact_us_path
+      %h4.italic
+        “I firmly believe in the idea that if you aren’t trying to change the world, then you just aren’t thinking
+        big enough. QSUS is the perfect platform for that – for students who really want to get their feet wet and
+        make a difference.”
+        %br/
+        %br/
+        %center - QSUS 2018 Delegate
+
+    / Partners
+    %article#partners
+      %h2.major PARTNERS
+      %h4#Interested
+        %center
+          Interested in partnering with QSUS?
+          %br>/
+          email us at -
+          %a{:href => "mailto:sponsor@qsus.ca"} sponsor@qsus.ca
+      //.partner-flex-container
+      .partner-flex-grid
+        .tier1
+          .partner-t1
+            .img
+              = link_to image_tag("company-logos/sustainable_kingston_logo.png", alt: "Sustainable Kingston Logo"), "https://www.sustainablekingston.com/"
+        .tier2
+          .partner-t2
+            .img
+              = link_to image_tag("company-logos/golder_logo.png", alt: "Golder Associates Logo"), "https://www.golder.com/global/en/modules.php?name=Pages&sp_id=109"
+        .tier3
+          .partner-t3
+            .img
+              = link_to image_tag("company-logos/queens_hosp_logo.png", alt: "Queen's Hospitality Logo Logo"),"https://dining.queensu.ca/"
+          .partner-t3
+            .img
+              = link_to image_tag("company-logos/dd_qic_logo.png", alt: "DD Queen's Innovation Centre Logo"),"http://www.queensu.ca/innovationcentre/"
+        .tier4
+          .partner-t4
+            .img
+              = link_to image_tag("company-logos/grizzley_grill_logo.png", alt: "Grizzly Grill Logo"),"http://www.thegrizzlygrill.ca/"
+          .partner-t4
+            .img
+              = link_to image_tag("company-logos/mackinnon_logo.jpeg", alt: "MacKinnon Brewing Logo"),"http://www.mackinnonbrewing.com/"
+          .partner-t4
+            .img
+              = link_to image_tag("company-logos/browns_logo.png", alt: "Browns Dining Solutions Logo"),"https://browns.ca/"
+          .partner-t4
+            .img
+              = link_to image_tag("company-logos/coca_cola_hosp_logo.png", alt: "Coca Cola Logo"),"http://www.coca-cola.ca/"
+        .tier5
+          .partner-t5
+            .img
+              = link_to image_tag("company-logos/rmc_logo.png", alt: "RMC Logo"), "https://www.rmcc-cmrc.ca/en"
+          .partner-t5
+            .img
+              = link_to image_tag("company-logos/queens_logo.png", alt: "Queen's University Logo"), "http://www.queensu.ca/"
+          .partner-t5
+            .img
+              = link_to image_tag("company-logos/st_lawrence_logo.png", alt: "St-Lawrence College Logo"), "http://www.stlawrencecollege.ca/"
+        -#.flex-box
+        -#  .flex-item
+  / Footer
+  %footer#footer
+    %p.copyright © QSUS Executive Team.
+#bg
+
+-#.landing-image
+-#  %p
+-#    = "QSUS 2018"
+-#  %p
+-#    = "Forging solidarity"
+-#
+-#.container
+-#  #about-us
+-#    -# = fa_icon "camera-retro", text: "Take a photo"
+-#    %h1
+-#      Queen's Sustainability Conference
+-#    .blurb
+-#      %p
+-#        Our goal at QSUS will always be the same: to inspire innovation and collaboration amongst some of our generation’s
+-#        brightest minds. In doing so, we explore new and exciting ways of striving towards sustainability, and use this
+-#        practice to enact real, positive change in the Kingston community.
+-#      %p
+-#        Our methodology, however, is always changing – right alongside society’s most recent political, economic and
+-#        technological trends. QSUS recognizes the rapidly changing nature of the modern world and uses this to our
+-#        advantage. Not only do we believe in wearing many hats – we thrive in it; and we enjoy creating an environment
+-#        that welcomes open mindedness and versatility. Whether it be in entrepreneurship, conservation, activism,
+-#        technological innovation, or any number of areas – we are always up for a challenge, and we hope you are too.
+-#      %p
+-#        Welcome to QSUS 2018.
+-#    %p.quote
+-#      “I firmly believe in the idea that if you aren’t trying to change the world, then you just aren’t thinking big
+-#      enough. QSUS is the perfect platform for that – for students who really want to get their feet wet and make a
+-#      difference.”
+-#    %p.delegate
+-#      \- QSUS 2017 Delegate
+-#.page-divider
+-#.container
+-#  #our-partners
+-#    %h1
+-#      Our Partners
+-#    .photo-grid-container
+-#      .photo-grid
+-#        .photo-grid-item.first-item
+-#          .img
+-#            = image_tag "company-logos/sustainable-kingston.png"
+-#        .photo-grid-item
+-#          .img
+-#            = image_tag "company-logos/golder-associates-logo.svg.png"
+-#        .photo-grid-item
+-#          .img
+-#            = image_tag "company-logos/DDQIC.jpg"
+-#        .photo-grid-item
+-#          .img
+-#            = image_tag "company-logos/grizzly-grill-logo.png"
+-#        .photo-grid-item
+-#          .img
+-#            = image_tag "company-logos/queens-hospitality-logo.jpg"
+-#        .photo-grid-item
+-#          .img
+-#            = image_tag "company-logos/mackinnon_logo.jpg"
+-#.container
+-#  .contact_link
+-#    = link_to "Contact Us!", contact_us_path
