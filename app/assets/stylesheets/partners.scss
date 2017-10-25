@@ -1,0 +1,12 @@
+// styling for partners pop-up
+#partners {
+  > h2 {
+    color: #000000;
+    border-bottom-color: #000000;
+  }
+  .img img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

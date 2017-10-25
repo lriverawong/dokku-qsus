@@ -1,0 +1,73 @@
+/* Image */
+
+.image {
+  border-radius: 4px;
+  border: 0;
+  display: inline-block;
+  position: relative;
+  &:before {
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    background-image: image_url("overlay.png");
+    background-color: rgba(19, 21, 25, 0.5);
+    border-radius: 4px;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  img {
+    border-radius: 4px;
+    display: block;
+  }
+  &.left, &.right {
+    max-width: 40%;
+  }
+  &.left img, &.right img {
+    width: 100%;
+  }
+  &.left {
+    float: left;
+    padding: 0 1.5em 1em 0;
+    top: 0.25em;
+  }
+  &.right {
+    float: right;
+    padding: 0 0 1em 1.5em;
+    top: 0.25em;
+  }
+  &.fit {
+    display: block;
+    margin: 0 0 2rem 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &.main {
+    display: block;
+    margin: 2.5rem 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .image.main {
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image.main {
+    margin: 1.5rem 0;
+  }
+}

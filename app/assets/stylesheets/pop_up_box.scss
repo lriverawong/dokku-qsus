@@ -1,0 +1,22 @@
+/* Box */
+
+.box {
+  border-radius: 4px;
+  border: solid 1px #ffffff;
+  margin-bottom: 2rem;
+  padding: 1.5em;
+  > :last-child {
+    margin-bottom: 0;
+    > :last-child {
+      margin-bottom: 0;
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.alt {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+}

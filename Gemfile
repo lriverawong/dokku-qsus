@@ -39,6 +39,9 @@ gem 'rubocop', '~> 0.39.0'
 gem 'haml', '~> 5.0', '>= 5.0.2'
 gem 'haml-rails', '~> 1.0'
 
+# Font-Awesome - Non-sass version
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
