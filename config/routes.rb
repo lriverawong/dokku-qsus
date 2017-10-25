@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   # INFO
   # ['about_us', 'contact_us', 'our_team']
-  ['contact_us'].each do |page|
-    get page, controller: 'info', action: page
-  end
+  # ['contact_us'].each do |page|
+  #   get page, controller: 'info', action: page
+  # end
 
 end

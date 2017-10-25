@@ -1,3 +1,5 @@
+#bg
+
 #wrapper
   / Header
   %header#header
@@ -11,16 +13,16 @@
         %p "forging solidarity"
     %nav
       %ul
-        -#%li
-        -#  = link_to "About Us", "#{root_path}#about_us"
-        -#%li
-        -#  = link_to "Our Partners", "#{root_path}#partners"
+        %li
+          = link_to "About Us", "#{root_path}#about_us"
+        %li
+          = link_to "Our Partners", "#{root_path}#partners"
         -#%li
         -#  = link_to "Contact", "#{root_path}#contact"
-        %li
-          %a{:href => "#about_us"} ABOUT US
-        %li
-          %a{:href => "#partners"} PARTNERS
+        -#%li
+        -#  %a{:href => "#about_us"} ABOUT US
+        -#%li
+        -#  %a{:href => "#partners"} PARTNERS
         -#%li
         -#  %a{:href => "#contact"} CONTACT US
         -#/ <li><a href="#elements">Elements</a></li>
@@ -102,7 +104,7 @@
   / Footer
   %footer#footer
     %p.copyright © QSUS Executive Team.
-#bg
+
 
 -#.landing-image
 -#  %p

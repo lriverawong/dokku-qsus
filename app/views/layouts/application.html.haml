@@ -6,15 +6,18 @@
     %meta{:content => "NmIOBf8S35aH_IX31nT-os7xu8SmN-sVtI642vD-Mvo", :name => "google-site-verification"}/
     %title QSUS
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = javascript_include_tag 'skel', 'data-turbolinks-track' => true
-    = javascript_include_tag 'util', 'data-turbolinks-track' => true
-    = javascript_include_tag 'main', 'data-turbolinks-track' => true
+    -#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'jquery'
+    = javascript_include_tag 'jquery_ujs'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'skel'
+    = javascript_include_tag 'util'
+    = javascript_include_tag 'main'
     -#= favicon_link_tag asset_path('qsus-tab-icon.ico'), :rel => 'icon', :type => "image/x-icon"
     = favicon_link_tag asset_path('qsus-logo-transparent.png'), :rel => 'icon', :type =>  'image/png'
     %noscript
-      = stylesheet_link_tag    'noscript', media: 'all', 'data-turbolinks-track' => true
+      = stylesheet_link_tag    'noscript', media: 'all'
 
   %body
     -#= render 'partials/menu'

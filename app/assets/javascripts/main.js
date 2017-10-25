@@ -5,7 +5,7 @@
 */
 
 (function($) {
-
+    console.log("Function started");
     skel.breakpoints({
         xlarge:		'(max-width: 1680px)',
         large:		'(max-width: 1280px)',
@@ -16,7 +16,7 @@
     });
 
     $(function() {
-
+        console.log("Inside 2nd function?");
         var	$window = $(window),
             $body = $('body'),
             $wrapper = $('#wrapper'),
@@ -24,7 +24,6 @@
             $footer = $('#footer'),
             $main = $('#main'),
             $main_articles = $main.children('article');
-
         // Disable animations/transitions until the page has loaded.
         $body.addClass('is-loading');
 
@@ -79,7 +78,8 @@
         $main._show = function(id, initial) {
 
             var $article = $main_articles.filter('#' + id);
-
+            console.log("Once?");
+            console.log($article);
             // No such article? Bail.
             if ($article.length == 0)
                 return;
@@ -91,6 +91,7 @@
 
                 // Mark as switching.
                 $body.addClass('is-switching');
+                console.log($body);
 
                 // Mark as visible.
                 $body.addClass('is-article-visible');
@@ -406,4 +407,4 @@
 
     });
 
-});
+})(jQuery);

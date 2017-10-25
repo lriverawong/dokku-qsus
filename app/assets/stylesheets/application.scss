@@ -15,13 +15,16 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "jquery-ui";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600');
 
 
 @import "site_default_style";
 @import "noscript";
-@import "variables";
+//@import "variables";
+@import "site_wrapper"; //might need to move up higher in import
+@import "site_background";
 @import "partners";
 @import "contact_form";
 @import "pop_up_box";
@@ -30,7 +33,6 @@
 @import "site_lists";
 @import "site_tables";
 @import "site_buttons";
-@import "site_wapper"; //might need to move up higher in import
 @import "site_header";
 @import "site_main_page";
 @import "site_footer";
