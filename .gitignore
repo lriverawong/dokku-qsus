@@ -24,3 +24,7 @@
 
 # .idea
 .idea/
+
+#public
+.public/assets/
+
