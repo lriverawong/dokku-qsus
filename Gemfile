@@ -47,6 +47,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 # Gems for contact form
 gem 'mail_form'
 gem 'simple_form'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 
 group :development, :test do

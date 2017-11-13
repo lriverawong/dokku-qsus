@@ -1,0 +1,109 @@
+#bg
+
+#wrapper
+  / Header
+  %header#header
+    - flash.each do |key, value|
+      %div{:class => "alert alert-#{key}"}= value
+    .logo
+      %span
+        .img
+          =image_tag("qsus_white_small.png", alt: "QSUS Logo")
+    .content
+      .inner
+        %h1 QUEEN'S SUSTAINABILITY CONFERENCE 2018
+        %p "forging solidarity"
+    %nav
+      %ul
+        %li
+          = link_to "About Us", "#{root_path}#about_us"
+        %li
+          = link_to "Our Partners", "#{root_path}#partners"
+        %li
+          = link_to "Contact", "#{root_path}#contact"
+  #main
+    / About
+    %article#about_us
+      %h2.major ABOUT US
+      %span.image.main
+        = image_tag("qsus_cover.png")
+      %p
+        Our goal at QSUS will always be the same: to inspire innovation and collaboration amongst some of our
+        generation’s brightest minds. In doing so, we explore new and exciting ways of striving towards sustainability,
+        and use this practice to enact real, positive change in the Kingston community.
+      %p
+        Our methodology, however, is always changing – right alongside society’s most recent political, economic and
+        technological trends. QSUS recognizes the rapidly changing nature of the modern world and uses this to our
+        advantage. Not only do we believe in wearing many hats – we thrive in it; and we enjoy creating an environment
+        that welcomes open mindedness and versatility. Whether it be in entrepreneurship, conservation, activism,
+        technological innovation, or any number of areas – we are always up for a challenge, and we hope you are too.
+      %h4.italic
+        “I firmly believe in the idea that if you aren’t trying to change the world, then you just aren’t thinking
+        big enough. QSUS is the perfect platform for that – for students who really want to get their feet wet and
+        make a difference.”
+        %br/
+        %br/
+        %center - QSUS 2018 Delegate
+
+    / Partners
+    %article#partners
+      %h2.major PARTNERS
+      %h4#Interested
+        %center
+          Interested in partnering with QSUS?
+          %br>/
+          email us at -
+          %a{:href => "mailto:sponsor@qsus.ca"} sponsor@qsus.ca
+      //.partner-flex-container
+      .partner-flex-grid
+        .tier1
+          .partner-t1
+            .img
+              = link_to image_tag("company-logos/sustainable_kingston_logo.png", alt: "Sustainable Kingston Logo"), "https://www.sustainablekingston.com/"
+        .tier2
+          .partner-t2
+            .img
+              = link_to image_tag("company-logos/golder_logo.png", alt: "Golder Associates Logo"), "https://www.golder.com/global/en/modules.php?name=Pages&sp_id=109"
+        .tier3
+          .partner-t3
+            .img
+              = link_to image_tag("company-logos/queens_hosp_logo.png", alt: "Queen's Hospitality Logo Logo"),"https://dining.queensu.ca/"
+          .partner-t3
+            .img
+              = link_to image_tag("company-logos/dd_qic_logo.png", alt: "DD Queen's Innovation Centre Logo"),"http://www.queensu.ca/innovationcentre/"
+        .tier4
+          .partner-t4
+            .img
+              = link_to image_tag("company-logos/coca_cola_hosp_logo.png", alt: "Coca Cola Logo"),"http://www.coca-cola.ca/"
+          -#.partner-t4
+          -#  .img
+          -#    = link_to image_tag("company-logos/mackinnon.jpeg", alt: "MacKinnon Logo"),"http://www.mackinnonbrewing.com/"
+          .partner-t4
+            .img
+              = link_to image_tag("company-logos/grizz.png", alt: "Grizz Logo"),"http://www.thegrizzlygrill.ca/"
+          .partner-t4
+            .img
+              = link_to image_tag("company-logos/browns.png", alt: "Browns Logo"),"http://www.browns.ca/"
+        .tier5
+          .partner-t5
+            .img
+              = link_to image_tag("company-logos/rmc_logo.png", alt: "RMC Logo"), "https://www.rmcc-cmrc.ca/en"
+          .partner-t5
+            .img
+              = link_to image_tag("company-logos/queens_logo.png", alt: "Queen's University Logo"), "http://www.queensu.ca/"
+          .partner-t5
+            .img
+              = link_to image_tag("company-logos/st_lawrence_logo.png", alt: "St-Lawrence College Logo"), "http://www.stlawrencecollege.ca/"
+        -#.flex-box
+        -#  .flex-item
+    %article#contact
+      %h1 Contact
+      = simple_form_for @contact, html: { class: 'form-horizontal' }, :url => new_info_path(:anchor => 'contact'), :method => "post" do |f|
+        = f.input :name, required: true
+        = f.input :email, required: true
+        = f.input :message, as: :text, required: false, input_html: { rows: 10 }, hint: 'Max 2000 characters'
+        .form-actions
+          = f.button :submit, 'Send message', class: 'btn btn-primary'
+  / Footer
+  %footer#footer
+    %p.copyright © QSUS Executive Team.
