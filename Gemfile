@@ -44,6 +44,10 @@ gem 'haml-rails', '~> 1.0'
 # Font-Awesome - Non-sass version
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
+# Gems for contact form
+gem 'mail_form'
+gem 'simple_form'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -66,6 +70,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # letter opener for contact form
+  gem 'letter_opener_web'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
