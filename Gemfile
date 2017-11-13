@@ -51,7 +51,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem "teaspoon-mocha" # or "teaspoon-jasmine" or "teaspoon-qunit"
   # Running via Spring preloader in process 27139
   # create  spec/teaspoon_env.rb
   # create  spec/javascripts/support
