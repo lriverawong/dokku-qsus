@@ -49,6 +49,9 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 
+# production
+gem 'rails_12factor', group: :production
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
