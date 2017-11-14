@@ -1,0 +1,14 @@
+{
+  "name": "qsus",
+  "description": "qsus dokku app",
+  "keywords": [
+    "dokku",
+    "rails",
+    "qsus.ca"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate && bundle exec rake assets:precompile"
+    }
+  }
+}
