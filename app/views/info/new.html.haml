@@ -20,6 +20,8 @@
         %li
           = link_to "Our Partners", "#{root_path}#partners"
         %li
+          = link_to "Forging Solidarity", "#{root_path}#forging"
+        %li
           = link_to "Contact", "#{root_path}#contact"
   #main
     / About
@@ -43,7 +45,7 @@
         make a difference.”
         %br/
         %br/
-        %center - QSUS 2018 Delegate
+        %center - Anuj Arora, QSUS 2017 Delegate
 
     / Partners
     %article#partners
@@ -55,6 +57,11 @@
           email us at -
           %a{:href => "mailto:sponsor@qsus.ca"} sponsor@qsus.ca
       //.partner-flex-container
+      %p 
+        We are independent, but we certainly don't work
+        alone. A huge part of our agenda is building and   
+        maintaining an impressive network of partners from 
+        the private sector, academia and government.
       .partner-flex-grid
         .tier1
           .partner-t1
@@ -96,6 +103,48 @@
               = link_to image_tag("company-logos/st_lawrence_logo.png", alt: "St-Lawrence College Logo"), "http://www.stlawrencecollege.ca/"
         -#.flex-box
         -#  .flex-item
+    %article#forging
+      %h1 Forging Solidarity
+      %span.image.main
+        = image_tag("forging-solidarity.png", alt: "Forging Solidarity Picture")
+      %p
+        It’s no secret that the world is changing. Amongst rising populations, 
+        declining resources, erratic climates and polarizing ideologies; we find
+        ourselves in a period of complete global transformation. 
+      %p
+        As such, the power for change no longer lies with the forces of
+        imperialistic globalization, but with those who are willing to
+        work together and strive towards a more unified future. 
+      %p
+        In 2018, our conference will use this idea to inspire delegates to
+        become the trailblazers of a generation built on innovation and
+        collaboration. As we look towards a better future, QSUS aims to
+        unite the Kingston community, strengthen our means of implementation,
+        and revitalize the local partnership for sustainable development.
+      %h2 Details
+      %h3
+        January 19-21, 2018
+      %h3
+        Queen’s University, Kingston ON
+      %p
+        Recognizing that the challenges associated with sustainability are
+        multidisciplinary by nature, QSUS embodies the many pillars of
+        sustainability and looks to unite students and professionals
+        from a number of different backgrounds and interests. By Forging
+        Solidarity in the Kingston community, we hope to enact real, positive
+        change while highlighting the important work of various organizations
+        throughout the city.
+      %p
+        This year, delegates at QSUS will be immersed in a weekend full of case
+        competitions, networking events, speaker panels, workshops and socials
+        , as well as an impressive portfolio of speakers and sponsors.As a new
+        edition, student delegates from Queen’s University will be joined by
+        St. Lawrence College and the Royal Military College of Canada.
+      %h2 Speakers
+      %p 
+        Check back in over the next few weeks for info on our exciting line up of speakers!
+      %h3
+        Welcome to QSUS 2018.
     %article#contact
       %h1 Contact
       = simple_form_for @contact, html: { class: 'form-horizontal' }, :url => new_info_path(:anchor => 'contact'), :method => "post" do |f|
