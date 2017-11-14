@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dokku": {
-      "postdeploy": "bundle exec assets:precompile"
+      "postdeploy": "bundle exec rake assets:precompile"
     }
   }
 }
