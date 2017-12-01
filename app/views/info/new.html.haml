@@ -8,11 +8,15 @@
     .logo
       %span
         .img
-          =image_tag("qsus_white_small.png", alt: "QSUS Logo")
+          = image_tag("qsus_white_small.png", alt: "QSUS Logo")
     .content
       .inner
         %h1 QUEEN'S SUSTAINABILITY CONFERENCE 2018
         %p January 19 - 21 2018
+        %a.typeform-share.button{"data-mode" => "popup", :href => "https://qsus.typeform.com/to/GQkyrl", :style => "display:inline-block;text-decoration:none;background-color:#267DDD;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;", :target => "_blank"} Register!
+        -#.main-type-form
+          -#%a.typeform-share.button{:href => 'https://qsus.typeform.com/to/GQkyrl', :target => '_blank'}
+          -#  Register!
     %nav
       %ul
         %li
@@ -23,6 +27,8 @@
           = link_to "Forging Solidarity", "#{root_path}#forging"
         %li
           = link_to "Contact", "#{root_path}#contact"
+        %li
+          = link_to "Sign Up", "#{root_path}#signup"
   #main
     / About
     %article#about_us
@@ -170,6 +176,8 @@
         %li
           %a.icon.fa-linkedin{:href => "https://www.linkedin.com/company/11314897/"}
             %span.label Linkedin
+    -#%article#signup
+
 
   / Footer
   %footer#footer

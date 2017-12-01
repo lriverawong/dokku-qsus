@@ -41,3 +41,25 @@
 
 //@import "partials/*";
 //@import "info/*";
+.main-type-form {
+  display:inline-block;
+  text-decoration:none;
+  background-color:#5a5a5a;
+  color:white;
+  cursor:pointer;
+  font-family:Helvetica,Arial,sans-serif;
+  font-size:14px;
+  line-height:35px;
+  text-align:center;
+  margin:0;
+  height:35px;
+  padding:0px 23px;
+  border-radius:3px;
+  max-width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-weight:bold;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
