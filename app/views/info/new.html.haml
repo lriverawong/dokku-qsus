@@ -126,8 +126,14 @@
           .partner-t5
             .img
               = link_to image_tag("company-logos/st_lawrence_logo.png", alt: "St-Lawrence College Logo"), "http://www.stlawrencecollege.ca/"
-        -#.flex-box
-        -#  .flex-item
+        %ul.icons
+        %li
+          %a.icon.fa-facebook{:href => "https://www.facebook.com/queens.sus/"}
+            %span.label Facebook
+        %li
+          %a.icon.fa-linkedin{:href => "https://www.linkedin.com/company/11314897/"}
+            %span.label Linkedin
+
     %article#forging
       %h1 Forging Solidarity
       %span.image.main
@@ -166,10 +172,36 @@
         edition, student delegates from Queen’s University will be joined by
         St. Lawrence College and the Royal Military College of Canada.
       %h2 Speakers
-      %p 
-        Check back in over the next few weeks for info on our exciting line up of speakers!
-      %h3
+      .speakers
+        %h3 Roberta Bondar
+        .speaker
+          .img
+            = image_tag("roberta-bondar.jpg", alt: "Roberta Bondar")
+          .speaker-bio
+            %p.quote
+              = "\"Without knowledge, the world is bereft of culture. And so we must be educators and students both. At some point, an educator must broaden the net to include all issues relevant to humanity’s challenges.\""
+            %p.name - Roberta Bondar
+            %p
+              = "Roberta Bondar is Canada’s first female astronaut and the first neurologist in space. Since returning from the great beyond, Roberta has been a passionate advocate for the pursuit of climate change solutions, and has cataloged environmental impacts and spoken to raise awareness around the world. She has compiled four photo-essay books on natural environments, and in 2009 she founded the Roberta Bondar Foundation, a non-profit organization centered on creating greater environmental awareness."
+        %h3 Simon Jackson
+        .speaker
+          .img
+            = image_tag("simon-jackson.jpg", alt: "Simon Jackson")
+          .speaker-bio
+            %p
+              = "Simon led the campaign to save the spirit bear for two decades, helping create the largest land protection measure in North American history. For his efforts, he was  named a Hero for the Planet by Time Magazine and was the inspiration for the movie, Spirit Bear: The Simon Jackson Story."
+            %p
+              = "Today, Simon leverages his skills and experiences as a strategist to help diverse clients secure a social license to advance good ideas that will benefit all of society. Additionally, Simon is a widely published author, as well as the lead storyteller for GhostBearPhotography.com, a photo and essay-driven, nature-focused education platform Simon co-founded in 2013."
+      %h2
         Welcome to QSUS 2018.
+      %ul.icons
+        %li
+          %a.icon.fa-facebook{:href => "https://www.facebook.com/queens.sus/"}
+            %span.label Facebook
+        %li
+          %a.icon.fa-linkedin{:href => "https://www.linkedin.com/company/11314897/"}
+            %span.label Linkedin
+
     %article#contact
       %h1 Contact
       = simple_form_for @contact, html: { class: 'form-horizontal' }, :url => new_info_path(:anchor => 'contact'), :method => "post" do |f|

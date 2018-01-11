@@ -87,6 +87,34 @@
         background-color: rgba(255, 255, 255, 0.175);
       }
     }
+    .speakers {
+      h3 {
+        text-align: center;
+        padding-bottom: 0;
+      }
+      .speaker {
+        display: block;
+        .img {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          padding: 1em 0;
+          img {
+            width: 50%;
+            height: auto;
+          }
+        }
+        .speaker-bio > .quote {
+          font-style: italic;
+          font-weight: bold;
+          margin-bottom: 0;
+        }
+        .speaker-bio > .name {
+          text-align: right;
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
 
